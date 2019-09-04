@@ -1,16 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Main from "./pages/Main";
+import Saved from "./pages/Saved";
 import Navbar from "./components/Navbar";
-import Jumbotron from "./components/Jumbotron";
-import Search from "./components/Search";
-class App extends Component {
-  render() {
-    return (
+
+function App() {
+  return (
+    <Router>
       <div>
-      <Navbar></Navbar>
-      <Jumbotron></Jumbotron>
-      <Search></Search>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/saved" component={Saved} />
+        </Switch>
       </div>
-    )};
-};
+    </Router>
+  );
+}
 
 export default App;
+
