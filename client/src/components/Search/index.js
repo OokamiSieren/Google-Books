@@ -4,16 +4,19 @@ import React from "react";
 
 // This file exports the Input, TextArea, and FormBtn components
 
- function Search (props) {
+ function Search ({ q, handleInputChange, handleFormSubmit}) {
   return (
           <div className="container">
           <h3>Book Search:</h3>
-<form class="create-form">
-  <div class="form-group">
-    <label for="ca">Book Ttitle: </label>
+<form className="create-form">
+  <div className="form-group">
+    <label>Book Ttitle: </label>
     <br></br>
-    <input type="text"></input>
-    <button type="submit">Search</button>
+    <input className="form-control"
+          id="Title"type="text"value={q}name="q"
+          onChange={handleInputChange}
+          required></input>
+    <button onClick={handleFormSubmit}type="submit">Search</button>
   </div>
   </form>
   </div>
