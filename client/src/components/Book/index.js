@@ -10,7 +10,7 @@ function Book({ title, subtitle, authors, link, description, image, Button }) {
           </div>
           <div className="col-md-4">
             <div className="btn-container">
-              <a className="btn btn-light" target="_blank" rel="noopener noreferrer" href={link}>
+              <a className="btn btn-info" target="_blank" rel="noopener noreferrer" href={link} id="text">
                 View
               </a>
               <Button />

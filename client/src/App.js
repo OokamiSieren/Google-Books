@@ -4,11 +4,12 @@ import Main from "./pages/Main";
 import Saved from "./pages/Saved";
 import NoMatch from "./pages/NoMatch";
 import Navbar from "./components/Navbar";
+import "./main.css";
 
 function App() {
   return (
     <Router>
-      <div>
+      <div id="mainContainer">
         <Navbar />
         <Switch>
           <Route exact path="/" component={Main} />

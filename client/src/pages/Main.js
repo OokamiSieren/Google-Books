@@ -10,6 +10,7 @@ class Main extends Component {
     q: "",
     message: "Search For A Book To Begin!"
   };
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -52,6 +53,7 @@ class Main extends Component {
       image: book.volumeInfo.imageLinks.thumbnail
     }).then(() => this.getBooks());
   };
+ 
   render() {
     return (
       <div className="container">
@@ -67,6 +69,7 @@ class Main extends Component {
                 <div className="row">
                   <div className="col-md-12">
                   <Card title="Results">
+                  
               {this.state.books.length ? (
                 <ul>
                   {this.state.books.map(book => (
