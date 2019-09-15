@@ -3,6 +3,7 @@ import Jumbotron from "../components/Jumbotron";
 import Book from "../components/Book";
 import Card from "../components/Card";
 import API from "../utils/API";
+import Footer from "../components/Footer";
 
 class Saved extends Component {
   state = {
@@ -67,7 +68,7 @@ class Saved extends Component {
             </Card>
           </div>
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }

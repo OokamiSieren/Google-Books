@@ -1,9 +1,10 @@
 import React from "react";
 import Jumbotron from "../components/Jumbotron";
+import Footer from "../components/Footer";
 
 function NoMatch() {
   return (
-    <div className="containter" >
+    <div className="containter">
       <div className="row">
         <div className="col-md-12">
           <Jumbotron>
@@ -16,6 +17,7 @@ function NoMatch() {
           </Jumbotron>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

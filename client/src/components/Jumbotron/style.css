@@ -1,17 +1,11 @@
-#jumbo{
-    background: url("../../images/books.jpg");
+#jumbo {
+  background: url("../../images/books.jpg");
 }
 #header {
-    text-align: center;
-    color:white;
-    text-shadow:
-    0.05em 0 black,
-    0 0.05em black,
-    -0.05em 0 black,
-    0 -0.05em black,
-    -0.05em -0.05em black,
-    -0.05em 0.05em black,
-    0.05em -0.05em black,
+  text-align: center;
+  color: white;
+  text-shadow: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black,
+    -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black,
     0.05em 0.05em black;
-    font-family: 'Chilanka', cursive;
+  font-family: "Chilanka", cursive;
 }

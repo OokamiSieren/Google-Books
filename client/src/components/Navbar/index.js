@@ -47,13 +47,21 @@ class Nav extends Component {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <div className={`${this.state.open ? "" : "collapse "}navbar-collapse`} id="navbarNav">
+        <div
+          className={`${this.state.open ? "" : "collapse "}navbar-collapse`}
+          id="navbarNav"
+        >
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
                 onClick={this.toggleNav}
-                className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
-                to="/" id="text"
+                className={
+                  window.location.pathname === "/"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+                to="/"
+                id="text"
               >
                 Search
               </Link>
@@ -61,8 +69,13 @@ class Nav extends Component {
             <li className="nav-item">
               <Link
                 onClick={this.toggleNav}
-                className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                to="/saved" id="text"
+                className={
+                  window.location.pathname === "/saved"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+                to="/saved"
+                id="text"
               >
                 Saved
               </Link>
@@ -75,4 +88,3 @@ class Nav extends Component {
 }
 
 export default Nav;
-
