@@ -9,7 +9,7 @@ class Main extends Component {
   state = {
     books: [],
     q: "",
-    message: "No results yet. Have you serached for a title?"
+    message: "No results yet. Have you searched for a title?"
   };
 
   handleInputChange = event => {
@@ -26,11 +26,13 @@ class Main extends Component {
           books: res.data
         })
       )
-      .catch(() =>
+      .catch(err => {
+        console.log(err)
         this.setState({
           books: [],
           message: "No New Books Found, Try a Different Query"
         })
+      }
       );
   };
 
