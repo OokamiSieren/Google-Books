@@ -7,7 +7,10 @@ module.exports = {
     const { query: params } = req;
     console.log(params)
     axios
-    .get(`https://www.googleapis.com/books/v1/volumes/?q=${params.q}&key=AIzaSyDywpeSZYKWPT042Cz1L4XvORf_xf6i7Hs`)
+      // .get("https://www.googleapis.com/books/v1/volumes", {
+      //   params
+      // })
+      .get(`https://www.googleapis.com/books/v1/volumes/?q=${params.q}&key=AIzaSyDywpeSZYKWPT042Cz1L4XvORf_xf6i7Hs`)
       .then(results =>
         results.data.items.filter(
           result =>
@@ -31,5 +34,5 @@ module.exports = {
         console.log(err.message)
         res.status(422).json(err)
       })
-    }
-  };
+  }
+};
