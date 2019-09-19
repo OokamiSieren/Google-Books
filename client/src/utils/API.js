@@ -7,11 +7,17 @@ export default {
       params: {
         q: q
       }
-    });
+    }
+    .catch(err => {
+      console.log(err.message)
+    })
+    );
+
   },
   // Gets all saved books
   getSavedBooks: function () {
     return axios.get("/api/books");
+    
   },
   // Deletes the saved book with the given id
   deleteBook: function (id) {
