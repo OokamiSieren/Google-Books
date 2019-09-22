@@ -4,13 +4,13 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     console.log(req)
-    const { query: params } = req;
-    console.log(params)
+    const { query } = req;
+    console.log(query)
     axios
       // .get("https://www.googleapis.com/books/v1/volumes", {
       //   params
       // })
-      .get(`https://www.googleapis.com/books/v1/volumes/?q=${params.q}&key=AIzaSyDywpeSZYKWPT042Cz1L4XvORf_xf6i7Hs`)
+      .get(`https://www.googleapis.com/books/v1/volumes/?q=${query.q}&key=${process.env.GOOGLE_KEY}`)
       .then(results =>
         results.data.items.filter(
           result =>
