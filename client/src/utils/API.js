@@ -8,9 +8,6 @@ export default {
         q: q
       }
     }
-    .catch(err => {
-      console.log(err.message)
-    })
     );
 
   },
